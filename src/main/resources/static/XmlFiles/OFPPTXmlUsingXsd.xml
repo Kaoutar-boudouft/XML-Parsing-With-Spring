@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OFPPT ville="tanger" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="OFPPT.xsd">
+    <Departement idDep="Dep1503">
+        <NomDepartement>Informatique</NomDepartement>
+        <Filiere idFiliere="F01780">
+            <FiliereLabel>TDM</FiliereLabel>
+            <Etudiants>
+                <Etudiant idStu="S137892">
+                    <Nom>Boudouft</Nom>
+                    <Prenom>kaoutar</Prenom>
+                    <DOB lieu="tanger">2001-07-22</DOB>
+                    <ResVille>martil</ResVille>
+                    <EtudiantEmail>kaoutarboudouft@2gmail.com</EtudiantEmail>
+                    <EtudiantTelephone>0688683466</EtudiantTelephone>
+                    <AnneBacalaureat>2019</AnneBacalaureat>
+                </Etudiant>
+                <Etudiant idStu="S1378790">
+                    <Nom>Homrani-Drideb</Nom>
+                    <Prenom>Abdollah</Prenom>
+                    <DOB lieu="tanger" >2000-01-10</DOB>
+                    <ResVille>rabat</ResVille>
+                    <EtudiantEmail>abdollahhomrani@gmail.com</EtudiantEmail>
+                    <EtudiantTelephone>0688678952</EtudiantTelephone>
+                    <AnneBacalaureat>2020</AnneBacalaureat>
+                </Etudiant>
+                <Etudiant idStu="S1371002">
+                    <Nom>Afia</Nom>
+                    <Prenom>Zainab</Prenom>
+                    <DOB lieu="tanger" >1998-03-06</DOB>
+                    <ResVille>tanger</ResVille>
+                    <EtudiantEmail>afiazainab@gmail.com</EtudiantEmail>
+                    <EtudiantTelephone>0678129632</EtudiantTelephone>
+                    <AnneBacalaureat>2016</AnneBacalaureat>
+                </Etudiant>
+            </Etudiants>
+            <Professeurs>
+                <Professeur idProf="P1028">
+                    <Nom>Azzegouar</Nom>
+                    <Prenom>Mohammed-Karim</Prenom>
+                    <DOB lieu="oujda">1989-10-16</DOB>
+                    <ResVille>tanger</ResVille>
+                    <Emails>
+                        <Email type="Personnel">Karimzzegouar@gmail.com</Email>
+                        <Email type="Professionnel">Kazzegouar@gmail.com</Email>
+                    </Emails>
+                    <Telephones>
+                        <Telephone type="Portable">0678921470</Telephone>
+                    </Telephones>
+                    <Salaire>35000</Salaire>
+                </Professeur>
+                <Professeur idProf="P1789">
+                    <Nom>El-harrak</Nom>
+                    <Prenom>Laila</Prenom>
+                    <DOB lieu="al-hoceima">1992-02-08</DOB>
+                    <ResVille>tanger</ResVille>
+                    <Emails>
+                        <Email type="Professionnel">lharrak@gmail.com</Email>
+                    </Emails>
+                    <Telephones>
+                        <Telephone type="Portable">0678921852</Telephone>
+                    </Telephones>
+                    <Salaire>21000</Salaire>
+                </Professeur>
+            </Professeurs>
+            <Modules>
+                <Module idMod="M1478902" refProf="P1028">
+                    <ModuleLabel>SGBD</ModuleLabel>
+                    <MasseHorraire>PT41H42M</MasseHorraire>
+                </Module>
+                <Module idMod="M11452" refProf="P1028">
+                    <ModuleLabel>PHP</ModuleLabel>
+                    <MasseHorraire>PT20H30M</MasseHorraire>
+                </Module>
+                <Module idMod="M7890078" refProf="P1789">
+                    <ModuleLabel>Bureautique</ModuleLabel>
+                    <MasseHorraire>PT10H</MasseHorraire>
+                </Module>
+            </Modules>
+            <Notes>
+                <Note ModuleRef="M11452" EtudiantRef="S1371002">14.75</Note>
+                <Note ModuleRef="M1478902" EtudiantRef="S1378790">17</Note>
+                <Note ModuleRef="M1478902" EtudiantRef="S137892">19.5</Note>
+                <Note ModuleRef="M7890078" EtudiantRef="S137892">14</Note>
+                <Note ModuleRef="M11452" EtudiantRef="S1378790">19</Note>
+            </Notes>
+        </Filiere>
+    </Departement>
+    <Departement idDep="Dep24580">
+        <NomDepartement>Infographie</NomDepartement>
+        <Filiere idFiliere="F00721">
+            <FiliereLabel>INFG</FiliereLabel>
+            <Etudiants>
+                <Etudiant idStu="S147880">
+                    <Nom>El-kassimi</Nom>
+                    <Prenom>Ibtissam</Prenom>
+                    <DOB lieu="al-hoceima">2002-12-12</DOB>
+                    <ResVille>tanger</ResVille>
+                    <EtudiantEmail>Ibtissam2@2gmail.com</EtudiantEmail>
+                    <EtudiantTelephone>0687983466</EtudiantTelephone>
+                    <AnneBacalaureat>2020</AnneBacalaureat>
+                </Etudiant>
+                <Etudiant idStu="S179200">
+                    <Nom>Chbani</Nom>
+                    <Prenom>Mohammed</Prenom>
+                    <DOB lieu="tanger" >2001-10-10</DOB>
+                    <ResVille>tanger</ResVille>
+                    <EtudiantEmail>zarax@gmail.com</EtudiantEmail>
+                    <EtudiantTelephone>0679201352</EtudiantTelephone>
+                    <AnneBacalaureat>2020</AnneBacalaureat>
+                </Etudiant>
+                <Etudiant idStu="P78923">
+                    <Nom>X</Nom>
+                    <Prenom>Moujib</Prenom>
+                    <DOB lieu="marrakech" >2001-06-06</DOB>
+                    <ResVille>marrakech</ResVille>
+                    <EtudiantEmail>xujib@gmail.com</EtudiantEmail>
+                    <EtudiantTelephone>0678129632</EtudiantTelephone>
+                    <AnneBacalaureat>2020</AnneBacalaureat>
+                </Etudiant>
+            </Etudiants>
+            <Professeurs>
+                <Professeur idProf="P98017">
+                    <Nom>Majidi</Nom>
+                    <Prenom>Rachida</Prenom>
+                    <DOB lieu="nador">1989-10-16</DOB>
+                    <ResVille>casablanca</ResVille>
+                    <Emails>
+                        <Email type="Professionnel">rachida@gmail.com</Email>
+                    </Emails>
+                    <Telephones>
+                        <Telephone type="Bureau">0578921470</Telephone>
+                    </Telephones>
+                    <Salaire>12000</Salaire>
+                </Professeur>
+                <Professeur idProf="P789">
+                    <Nom>El-Messari</Nom>
+                    <Prenom>Youssef</Prenom>
+                    <DOB lieu="zagora">1992-02-08</DOB>
+                    <ResVille>tetouane</ResVille>
+                    <Emails>
+                        <Email type="Personnel">youssef@gmail.com</Email>
+                    </Emails>
+                    <Telephones>
+                        <Telephone type="Portable">0678921852</Telephone>
+                    </Telephones>
+                    <Salaire>45000</Salaire>
+                </Professeur>
+            </Professeurs>
+            <Modules>
+                <Module idMod="M1402" refProf="P789">
+                    <ModuleLabel>Adobe Xd</ModuleLabel>
+                    <MasseHorraire>PT15H20M</MasseHorraire>
+                </Module>
+                <Module idMod="M11" refProf="P98017">
+                    <ModuleLabel>3D</ModuleLabel>
+                    <MasseHorraire>PT25H30M</MasseHorraire>
+                </Module>
+            </Modules>
+            <Notes>
+                <Note ModuleRef="M1402" EtudiantRef="S147880">12</Note>
+                <Note ModuleRef="M11" EtudiantRef="S147880">9</Note>
+                <Note ModuleRef="M1402" EtudiantRef="S179200">19</Note>
+                <Note ModuleRef="M11" EtudiantRef="S179200">12</Note>
+                <Note ModuleRef="M1402" EtudiantRef="P78923">14.5</Note>
+                <Note ModuleRef="M11" EtudiantRef="P78923">6.5</Note>
+            </Notes>
+        </Filiere>
+    </Departement>
+
+</OFPPT>

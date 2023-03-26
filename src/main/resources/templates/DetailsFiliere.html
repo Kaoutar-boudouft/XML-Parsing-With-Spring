@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details Filiere </title>
+  <link th:href="@{/vendor/animate.css/animate.min.css}"  rel="stylesheet">
+  <link th:href="@{/vendor/aos/aos.css}"  rel="stylesheet">
+  <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"  rel="stylesheet">
+  <link th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}"  rel="stylesheet">
+  <link th:href="@{/vendor/boxicons/css/boxicons.min.css}"  rel="stylesheet">
+  <link th:href="@{/vendor/remixicon/remixicon.css}"  rel="stylesheet">
+  <link th:href="@{/vendor/swiper/swiper-bundle.min.css}"  rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link th:href="@{/css/style.css}"  rel="stylesheet">
+
+</head>
+<body>
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+    <h1 class="logo me-auto"><a th:href="@{/}"><img th:src="@{/img/logo.png}"  width="130" height="100"></a></h1>
+
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+
+
+  </div>
+</header><!-- End Header -->
+<section style="height: 450px" id="hero" class="d-flex justify-content-center align-items-center">
+  <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+    <h1 th:text="${'Detaille de filiere : ' + filiere.FiliereLabel}"></h1>
+  </div>
+</section><!-- End Hero -->
+
+<div class="container-fluid ">
+  <div class="row">
+    <div class="col-12 mx-auto bg-white p-3 rounded shadow">
+
+      <!-- Fixed header table-->
+      <div class="table-responsive">
+        <table class="table table-fixed">
+          <thead>
+          <tr>
+            <th scope="col" class="col-2 text-center">#</th>
+            <th scope="col" class="col-2 text-center">Nom Filiere</th>
+            <th scope="col" class="col-8 text-center">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row" class="col-3 text-center" th:text="${filiere.idFiliere}"></th>
+            <td class="col-3 text-center" th:text="${filiere.FiliereLabel}"></td>
+            <td class="col-3 text-center" >
+              <a th:href="@{/Departements/__${idDep}__/Filieres/__${filiere.idFiliere}__/Etudiants}" class="btn btn-primary mx-auto m-1" style="width: 200px;color: white" align="center">Consulter Etudiants</a>
+              <br>
+              <a th:href="@{/Departements/__${idDep}__/Filieres/__${filiere.idFiliere}__/Professeurs}" class="btn btn-success mx-auto m-1" style="width: 200px;color: white" align="center">Consulter Professeurs</a>
+              <br>
+              <a th:href="@{/Departements/__${idDep}__/Filieres/__${filiere.idFiliere}__/Modules}" class="btn btn-warning mx-auto m-1" style="width: 200px;color: white" align="center">Consulter Modules</a>
+              <br>
+              <a th:href="@{/Departements/__${idDep}__/Filieres/__${filiere.idFiliere}__/Notes}" class="btn btn-danger mx-auto m-1" style="width: 200px;color: white" align="center">Consulter Notes</a>
+              <br>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div><!-- End -->
+
+    </div>
+  </div>
+</div>
+<footer id="footer">
+
+
+
+  <div class="container d-md-flex py-4">
+
+    <div class="me-md-auto text-center text-md-start">
+      <div class="copyright">
+        &copy; Copyright . All Rights Reserved
+      </div>
+    </div>
+
+  </div>
+</footer>
+<!-- Vendor JS Files -->
+<script th:src="@{/vendor/purecounter/purecounter_vanilla.js}" ></script>
+<script th:src="@{/vendor/aos/aos.js}" ></script>
+<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}" ></script>
+<script th:src="@{/vendor/swiper/swiper-bundle.min.js}" ></script>
+<script th:src="@{/vendor/php-email-form/validate.js}" ></script>
+
+<!-- Template Main JS File -->
+<script th:src="@{/js/main.js}" ></script></body>
+</html>

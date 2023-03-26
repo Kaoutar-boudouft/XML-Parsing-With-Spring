@@ -1,0 +1,44 @@
+<!ELEMENT OFPPT (Departement+) >
+<!ATTLIST OFPPT ville CDATA #REQUIRED>
+<!ELEMENT Departement (NomDepartement,Filiere+) >
+<!ATTLIST Departement idDep CDATA #REQUIRED>
+<!ELEMENT NomDepartement (#PCDATA)>
+<!ELEMENT Filiere (FiliereLabel,Etudiants,Professeurs,Modules,Notes) >
+<!ATTLIST Filiere idFiliere CDATA #REQUIRED>
+<!ELEMENT FiliereLabel (#PCDATA) >
+<!ELEMENT Etudiants (Etudiant+) >
+<!ELEMENT Etudiant (EtudiantNom,EtudiantPrenom,EtudiantBD,EtudiantResVille,EtudiantEmail,EtudiantTelephone,AnneBacalaureat) >
+<!ATTLIST Etudiant idStu CDATA #REQUIRED>
+<!ELEMENT EtudiantNom (#PCDATA) >
+<!ELEMENT EtudiantPrenom (#PCDATA) >
+<!ELEMENT EtudiantBD (#PCDATA) >
+<!ATTLIST EtudiantBD lieu CDATA #REQUIRED>
+<!ELEMENT EtudiantResVille (#PCDATA) >
+<!ELEMENT EtudiantEmail (#PCDATA) >
+<!ELEMENT EtudiantTelephone (#PCDATA) >
+<!ELEMENT AnneBacalaureat (#PCDATA) >
+<!ELEMENT Professeurs (Professeur+) >
+<!ELEMENT Professeur (ProfNom,ProfPrenom,ProfBD,ProfResVille,ProfEmails,ProfTelephones,Salaire) >
+<!ATTLIST Professeur idProf CDATA #REQUIRED>
+<!ELEMENT ProfNom (#PCDATA) >
+<!ELEMENT ProfPrenom (#PCDATA) >
+<!ELEMENT ProfBD (#PCDATA) >
+<!ATTLIST ProfBD lieu CDATA #REQUIRED>
+<!ELEMENT ProfResVille (#PCDATA) >
+<!ELEMENT ProfEmails (Email+) >
+<!ELEMENT Email (#PCDATA) >
+<!ATTLIST Email type ( Personnel | Professionnel ) #REQUIRED>
+<!ELEMENT ProfTelephones (Telephone+) >
+<!ELEMENT Telephone (#PCDATA) >
+<!ATTLIST Telephone type ( Bureau | Portable | fixe ) #REQUIRED>
+<!ELEMENT Salaire (#PCDATA) >
+<!ELEMENT Modules (Module+) >
+<!ELEMENT Module (ModuleLabel,MasseHorraire) >
+<!ATTLIST Module idMod CDATA #REQUIRED>
+<!ATTLIST Module refProf CDATA #REQUIRED>
+<!ELEMENT ModuleLabel (#PCDATA) >
+<!ELEMENT MasseHorraire (#PCDATA) >
+<!ELEMENT Notes (Note+) >
+<!ELEMENT Note (#PCDATA) >
+<!ATTLIST Note EtudiantRef CDATA #REQUIRED>
+<!ATTLIST Note ModuleRef CDATA #REQUIRED>

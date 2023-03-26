@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE OFPPT SYSTEM "C:\Users\hp\IdeaProjects\XmlProject\src\main\resources\static\XmlFiles\OFPPT.dtd">
+<OFPPT ville="tanger">
+    <Departement idDep="Dep1503" >
+        <NomDepartement>Informatique</NomDepartement>
+        <Filiere idFiliere="F01780">
+            <FiliereLabel>TDM</FiliereLabel>
+            <Etudiants>
+                <Etudiant idStu="S137892">
+                    <EtudiantNom>Boudouft</EtudiantNom>
+                    <EtudiantPrenom>kaoutar</EtudiantPrenom>
+                    <EtudiantBD lieu="tanger" >22-07-2001</EtudiantBD>
+                    <EtudiantResVille>tanger</EtudiantResVille>
+                    <EtudiantEmail>kaoutarboudouft2@gmail.com</EtudiantEmail>
+                    <EtudiantTelephone>0688683466</EtudiantTelephone>
+                    <AnneBacalaureat>2019</AnneBacalaureat>
+                </Etudiant>
+                <Etudiant idStu="S1378790">
+                    <EtudiantNom>Homrani Drideb</EtudiantNom>
+                    <EtudiantPrenom>Abdollah</EtudiantPrenom>
+                    <EtudiantBD lieu="tanger" >10-01-2000</EtudiantBD>
+                    <EtudiantResVille>tanger</EtudiantResVille>
+                    <EtudiantEmail>abdollahhomrani@gmail.com</EtudiantEmail>
+                    <EtudiantTelephone>0688678952</EtudiantTelephone>
+                    <AnneBacalaureat>2020</AnneBacalaureat>
+                </Etudiant>
+                <Etudiant idStu="S1371002">
+                    <EtudiantNom>Afia</EtudiantNom>
+                    <EtudiantPrenom>Zainab</EtudiantPrenom>
+                    <EtudiantBD lieu="tanger" >06-03-1998</EtudiantBD>
+                    <EtudiantResVille>tanger</EtudiantResVille>
+                    <EtudiantEmail>afiazainab@gmail.com</EtudiantEmail>
+                    <EtudiantTelephone>067812963202</EtudiantTelephone>
+                    <AnneBacalaureat>2016</AnneBacalaureat>
+                </Etudiant>
+            </Etudiants>
+            <Professeurs>
+                <Professeur idProf="P1028">
+                    <ProfNom>Azzegouar</ProfNom>
+                    <ProfPrenom>Mohammed Karim</ProfPrenom>
+                    <ProfBD lieu="casablanca">16-10-1989</ProfBD>
+                    <ProfResVille>tanger</ProfResVille>
+                    <ProfEmails>
+                        <Email type="Personnel">Karimzzegouar@gmail.com</Email>
+                        <Email type="Professionnel">Kazzegouar@gmail.com</Email>
+                    </ProfEmails>
+                    <ProfTelephones>
+                        <Telephone type="Portable">0678921470</Telephone>
+                    </ProfTelephones>
+                    <Salaire>35000</Salaire>
+                </Professeur>
+                <Professeur idProf="P1789">
+                    <ProfNom>El-harrak</ProfNom>
+                    <ProfPrenom>Laila</ProfPrenom>
+                    <ProfBD lieu="tanger">08-02-1992</ProfBD>
+                    <ProfResVille>tanger</ProfResVille>
+                    <ProfEmails>
+                        <Email type="Professionnel">lharrak@gmail.com</Email>
+                    </ProfEmails>
+                    <ProfTelephones>
+                        <Telephone type="Portable">0678921852</Telephone>
+                    </ProfTelephones>
+                    <Salaire>21000</Salaire>
+                </Professeur>
+            </Professeurs>
+            <Modules>
+                <Module idMod="M1478902" refProf="P1028">
+                    <ModuleLabel>SGBD</ModuleLabel>
+                    <MasseHorraire>41:45</MasseHorraire>
+                </Module>
+                <Module idMod="M11452" refProf="P1028">
+                    <ModuleLabel>PHP</ModuleLabel>
+                    <MasseHorraire>20:30</MasseHorraire>
+                </Module>
+                <Module idMod="M7890078" refProf="P1789">
+                    <ModuleLabel>Bureautique</ModuleLabel>
+                    <MasseHorraire>10:00</MasseHorraire>
+                </Module>
+            </Modules>
+            <Notes>
+                <Note ModuleRef="M1478902" EtudiantRef="S1371002">14.75</Note>
+                <Note ModuleRef="M1478902" EtudiantRef="S1378790">17</Note>
+                <Note ModuleRef="M1478902" EtudiantRef="S137892">14</Note>
+                <Note ModuleRef="M1478902" EtudiantRef="S137892">19.5</Note>
+                <Note ModuleRef="M11452" EtudiantRef="S1378790">19</Note>
+            </Notes>
+        </Filiere>
+    </Departement>
+</OFPPT>

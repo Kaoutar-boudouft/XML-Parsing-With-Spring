@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"  ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  >
+    <xsd:element name="OFPPT">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Departement" minOccurs="1" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="NomDepartement" type="xsd:normalizedString"/>
+                            <xsd:element name="Filiere" minOccurs="1" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="FiliereLabel" type="xsd:string"/>
+                                        <xsd:element name="Etudiants">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="Etudiant" minOccurs="3" maxOccurs="60" >
+                                                        <xsd:complexType>
+                                                            <xsd:sequence>
+                                                                <xsd:element ref="Nom"/>
+                                                                <xsd:element ref="Prenom"/>
+                                                                <xsd:element ref="DOB"/>
+                                                                <xsd:element ref="ResVille"/>
+                                                                <xsd:element name="EtudiantEmail" type="emailAddress"/>
+                                                                <xsd:element name="EtudiantTelephone" type="numTelephone"/>
+                                                                <xsd:element name="AnneBacalaureat" type="xsd:gYear"/>
+                                                            </xsd:sequence>
+                                                            <xsd:attribute name="idStu" type="xsd:string" use="required"/>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+
+                                        </xsd:element>
+
+                                        <xsd:element name="Professeurs">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="Professeur" minOccurs="2" maxOccurs="15" >
+                                                        <xsd:complexType>
+                                                            <xsd:sequence>
+                                                                <xsd:element ref="Nom"/>
+                                                                <xsd:element ref="Prenom"/>
+                                                                <xsd:element ref="DOB"/>
+                                                                <xsd:element ref="ResVille"/>
+                                                                <xsd:element name="Emails">
+                                                                    <xsd:complexType>
+                                                                        <xsd:sequence>
+                                                                            <xsd:element name="Email"  minOccurs="1" maxOccurs="2">
+                                                                                <xsd:complexType>
+                                                                                    <xsd:simpleContent>
+                                                                                        <xsd:extension base="emailAddress">
+                                                                                            <xsd:attribute name="type" type="EmailType"  use="required" />
+                                                                                        </xsd:extension>
+                                                                                    </xsd:simpleContent>
+                                                                                </xsd:complexType>
+                                                                            </xsd:element>
+                                                                        </xsd:sequence>
+                                                                    </xsd:complexType>
+                                                                </xsd:element>
+                                                                <xsd:element name="Telephones">
+                                                                    <xsd:complexType>
+                                                                        <xsd:sequence>
+                                                                            <xsd:element name="Telephone"  minOccurs="1" maxOccurs="3" >
+                                                                                <xsd:complexType>
+                                                                                    <xsd:simpleContent>
+                                                                                        <xsd:extension base="xsd:nonNegativeInteger">
+                                                                                            <xsd:attribute name="type" type="TeleType"  use="required" />
+                                                                                        </xsd:extension>
+                                                                                    </xsd:simpleContent>
+                                                                                </xsd:complexType>
+                                                                            </xsd:element>
+                                                                        </xsd:sequence>
+                                                                    </xsd:complexType>
+                                                                </xsd:element>
+                                                                <xsd:element name="Salaire" type="xsd:float"/>
+                                                            </xsd:sequence>
+                                                            <xsd:attribute name="idProf" type="xsd:string" use="required"/>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+
+                                        <xsd:element  name="Modules">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="Module" minOccurs="1" maxOccurs="7" >
+                                                        <xsd:complexType>
+                                                            <xsd:sequence>
+                                                                <xsd:element name="ModuleLabel" type="xsd:normalizedString"/>
+                                                                <xsd:element name="MasseHorraire" type="xsd:duration"/>
+                                                            </xsd:sequence>
+                                                            <xsd:attribute name="idMod" type="xsd:string" use="required"/>
+                                                            <xsd:attribute name="refProf" type="xsd:string" use="required"/>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+
+                                        </xsd:element>
+
+                                        <xsd:element name="Notes">
+                                            <xsd:complexType>
+                                               <xsd:sequence>
+                                                   <xsd:element name="Note" minOccurs="1" maxOccurs="unbounded">
+                                                       <xsd:complexType>
+                                                           <xsd:simpleContent>
+                                                               <xsd:extension base="noteInterval">
+                                                                   <xsd:attribute name="EtudiantRef" type="xsd:string" use="required"/>
+                                                                   <xsd:attribute name="ModuleRef" type="xsd:string" use="required"/>
+                                                               </xsd:extension>
+                                                           </xsd:simpleContent>
+                                                       </xsd:complexType>
+                                                   </xsd:element>
+                                               </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+
+                                    </xsd:sequence>
+                                    <xsd:attribute name="idFiliere" type="xsd:string" use="required"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="idDep" type="xsd:string" use="required"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="ville" type="Villes" use="required"/>
+        </xsd:complexType>
+
+        <xsd:key name="uniqueDepId">
+            <xsd:selector xpath="Departement"/>
+            <xsd:field xpath="@idDep"/>
+        </xsd:key>
+
+        <xsd:key name="uniqueProfId">
+            <xsd:selector xpath="./Departement/Filiere/Professeurs/Professeur"/>
+            <xsd:field xpath="@idProf"/>
+        </xsd:key>
+
+        <xsd:key name="uniqueStuId">
+            <xsd:selector xpath="./Departement/Filiere/Etudiants/Etudiant"/>
+            <xsd:field xpath="@idStu"/>
+        </xsd:key>
+
+        <xsd:key name="uniqueModId">
+            <xsd:selector xpath="./Departement/Filiere/Modules/Module"/>
+            <xsd:field xpath="@idMod"/>
+        </xsd:key>
+
+        <xsd:key name="uniqueFilId">
+            <xsd:selector xpath="./Departement/Filiere"/>
+            <xsd:field xpath="@idFiliere"/>
+        </xsd:key>
+
+        <xsd:keyref refer="uniqueProfId" name="refKeyProf">
+            <xsd:selector xpath="./Departement/Filiere/Modules/Module"/>
+            <xsd:field xpath="@refProf"/>
+        </xsd:keyref>
+
+        <xsd:keyref refer="uniqueStuId" name="refKeyStu">
+            <xsd:selector xpath="./Departement/Filiere/Notes/Note"/>
+            <xsd:field xpath="@EtudiantRef"/>
+        </xsd:keyref>
+
+        <xsd:keyref refer="uniqueModId" name="refKeyMod">
+            <xsd:selector xpath="./Departement/Filiere/Notes/Note"/>
+            <xsd:field xpath="@ModuleRef"/>
+        </xsd:keyref>
+
+    </xsd:element>
+
+
+    <xsd:simpleType name="Villes">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="tanger"/>
+            <xsd:enumeration value="casablanca"/>
+            <xsd:enumeration value="rabat"/>
+            <xsd:enumeration value="nador"/>
+            <xsd:enumeration value="al-hoceima"/>
+            <xsd:enumeration value="oujda"/>
+            <xsd:enumeration value="agadir"/>
+            <xsd:enumeration value="tetouane"/>
+            <xsd:enumeration value="martil"/>
+            <xsd:enumeration value="chefchaouen"/>
+            <xsd:enumeration value="zagora"/>
+            <xsd:enumeration value="marrakech"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="TeleType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Bureau"/>
+            <xsd:enumeration value="Portable"/>
+            <xsd:enumeration value="Fixe"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="EmailType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Professionnel"/>
+            <xsd:enumeration value="Personnel"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:element name="Nom" type="xsd:NMTOKEN"/>
+    <xsd:element name="Prenom" type="xsd:NMTOKEN"/>
+
+    <xsd:element name="DOB">
+        <xsd:complexType>
+            <xsd:simpleContent>
+                <xsd:extension base="xsd:date">
+                    <xsd:attribute name="lieu"  type="Villes" use="required"/>
+                </xsd:extension>
+            </xsd:simpleContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="ResVille" type="Villes"/>
+
+    <xsd:simpleType name="noteInterval">
+        <xsd:restriction base="xsd:float">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="20"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="emailAddress">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[^@]+@[^\.]+\..+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="numTelephone">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="(0[5-7])[0-9]{8}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+
+</xsd:schema>

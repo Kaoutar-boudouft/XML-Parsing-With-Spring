@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Trainers - Mentor Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link th:href="@{/img/logo.png}"  rel="icon">
+  <link th:href="@{/img/logo.png}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link th:href="@{/vendor/animate.css/animate.min.css}"  rel="stylesheet">
+  <link th:href="@{/vendor/aos/aos.css}"  rel="stylesheet">
+  <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"  rel="stylesheet">
+  <link th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}"  rel="stylesheet">
+  <link th:href="@{/vendor/boxicons/css/boxicons.min.css}"  rel="stylesheet">
+  <link th:href="@{/vendor/remixicon/remixicon.css}"  rel="stylesheet">
+  <link th:href="@{/vendor/swiper/swiper-bundle.min.css}"  rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link th:href="@{/css/style.css}"  rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Mentor
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a th:href="@{/}"><img th:src="@{/img/logo.png}"  width="130" height="100"></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main" data-aos="fade-in">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+        <h2>Professeurs</h2>
+        <p>List des professeurs</p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Trainers Section ======= -->
+    <section id="trainers" class="trainers">
+      <div class="container" data-aos="fade-up">
+
+        <div  class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div th:each="professeur:${professeurs}" class="col-lg-6 col-md-6 d-flex align-items-stretch">
+            <div class="member w-100">
+              <div class="w-100 member-content p-4">
+                <h4 th:text="${'Professeur N ' + professeur.idProf + ' : ' +professeur.prenom+' '+professeur.nom}"></h4>
+                <span style="text-transform: uppercase" th:text="${professeur.resVille}"></span>
+                <p th:text="${'Date et Lieu de naissance : ' + professeur.DOB + ' / ' + professeur.lieuN}"></p>
+                <p th:text="${'Salaire : ' + professeur.salaire }"></p>
+                <div class="social">
+                  <p>
+                    Numeros de telephone :
+                  <ul style="list-style: none" th:each="num:${professeur.Telephones}">
+                    <li style="margin-left: -35px" th:text="${num}"></li>
+                  </ul>
+                  </p>
+                  <p style="margin-top: -20px">
+                  Emails :
+                  <ul style="list-style: none" th:each="email:${professeur.emails}">
+                    <li style="margin-left: -35px" th:text="${email}"></li>
+                  </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section><!-- End Trainers Section -->
+
+  </main><!-- End #main -->
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script th:src="@{/vendor/purecounter/purecounter_vanilla.js}" ></script>
+  <script th:src="@{/vendor/aos/aos.js}" ></script>
+  <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}" ></script>
+  <script th:src="@{/vendor/swiper/swiper-bundle.min.js}" ></script>
+  <script th:src="@{/vendor/php-email-form/validate.js}" ></script>
+
+  <!-- Template Main JS File -->
+  <script th:src="@{/js/main.js}" ></script>
+
+</body>
+
+</html>
